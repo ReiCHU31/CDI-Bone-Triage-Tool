@@ -1,6 +1,7 @@
 # Forensic Bone DNA Triage ver 1.0: A Multi-Model Machine Learning Approach
 
 Developed by: **Phuong T.M. Chu (Rei)** 
+
 Affiliation: **Center for DNA Identification (CDI), Institute of Biology (IB), Vietnam Academy of Science and Technology (VAST)**
 
 ---
@@ -22,7 +23,8 @@ The tool integrates five optimized models, each selected for its unique strength
 ## 🛠️ Hybrid Decision Logic
 To bridge the gap between Artificial Intelligence and Forensic Expertise, the system employs a dual-layer validation:
 - **Layer 1 (ML Probability):** Each model calculates a probability score based on 7 morphological characteristics.
-- **Layer 2 (Expert Heuristics):** - **XGBoost Penalty:** If $\ge 5$ features show severe degradation, the model is penalized to prevent false PASS results.
+- **Layer 2 (Expert Heuristics):**
+    - **XGBoost Penalty:** If $\ge 5$ features show severe degradation, the model is penalized to prevent false PASS results.
     - **Strict Probability Guard:** If the baseline sensitivity (Logistic Regression) drops below 25%, traditional models are re-evaluated to prioritize forensic caution.
 
 ## 📂 File Structure
@@ -44,4 +46,4 @@ If you find this tool useful for your research, please cite our manuscript:
 *Phuong T.M. Chu, Thomas J. Parsons, Anh P. Nguyen, Vinh V. Tran, Tuan A. Vu, Phong H. Do, Ha M. Tran, Mai T.T. Bui, Lan T.T. Ninh, Vu H. Nguyen, Ha H. Chu, Tien Q. Phi, Thanh T. Tran (2026). Application of Machine Learning to Evaluate the Predictive Potential of Morphological Characteristics for Mitochondrial DNA Profiling from Challenging Bone Samples.*
 
 ---
-© 2026 Center for DNA Identification (CDI) | VAST
+© 2026 Center for DNA Identification (CDI) | IB | VAST
