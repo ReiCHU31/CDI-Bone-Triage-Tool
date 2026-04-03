@@ -39,29 +39,24 @@ select { width: 100%; padding: 8px; border: 1px solid #ced4da; border-radius: 4p
 .footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.8rem; color: #777; text-align: center; line-height: 1.6; }
 
 /* GitHub Corner Animation */
-.github-corner:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-}
-@keyframes octocat-wave {
-    0%, 100% { transform: rotate(0); }
-    20%, 60% { transform: rotate(-25deg); }
-    40%, 80% { transform: rotate(10deg); }
-}
-@media (max-width: 500px) {
-    .github-corner:hover .octo-arm { animation: none; }
-    .github-corner .octo-arm { animation: octocat-wave 560ms ease-in-out; }
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 15px; 
 }
 
-/* Footer styling */
-.footer-note {
-    margin-top: 40px;
-    padding-top: 20px;
-    font-size: 0.9em;
-    color: #666;
-    text-align: center;
+.github-header-icon {
+    display: flex;
+    align-items: center;
 }
-.footer-note hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin-bottom: 20px;
+
+.github-header-icon svg {
+    fill: #2c3e50;
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.github-header-icon:hover svg {
+    fill: #34495e;
+    transform: scale(1.1);
 }
