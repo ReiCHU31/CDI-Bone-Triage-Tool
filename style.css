@@ -1,62 +1,123 @@
 /**
  * Bone DNA Triage Tool - Styling
- * Author: Phuong T.M. Chu (Rei)
- * Year: 2026
+ * Center for DNA Identification (CDI), IB, VAST
+ * 2026 Version
  */
 
-body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; display: flex; justify-content: center; padding: 20px; }
-.container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 800px; width: 100%; }
-h1 { color: #1a237e; text-align: center; margin-bottom: 5px; font-size: 24px; }
-.subtitle { text-align: center; color: #6c757d; margin-bottom: 25px; font-size: 14px; }
-
-/* Header & Logos */
-.tool-header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-.logo-container { display: flex; justify-content: center; align-items: center; gap: 25px; margin-bottom: 15px; }
-.logo { height: 60px; width: auto; object-fit: contain; }
-.affiliation-text { font-size: 0.9rem; color: #444; line-height: 1.4; }
-.affiliation-text p { margin: 2px 0; }
-
-.model-selector { background: #e8eaf6; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid #1a237e; }
-.input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.input-group label { display: block; font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #495057; }
-select { width: 100%; padding: 8px; border: 1px solid #ced4da; border-radius: 4px; background-color: #fff; }
-
-.btn-predict { width: 100%; background: #1a237e; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 20px; font-size: 16px; transition: 0.2s; }
-.btn-predict:hover { background: #0d47a1; }
-
-.result-card { margin-top: 25px; padding: 20px; border-radius: 8px; text-align: center; }
-.hidden { display: none; }
-.pass { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
-.fail { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
-.status { font-size: 28px; font-weight: bold; }
-
-.result-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-.result-table th, .result-table td { border: 1px solid #dee2e6; padding: 12px; text-align: left; }
-.result-table th { background-color: #f1f3f5; color: #495057; }
-.pass-text { color: #28a745; font-weight: bold; }
-.fail-text { color: #dc3545; font-weight: bold; }
-
-.footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.8rem; color: #777; text-align: center; line-height: 1.6; }
-
-/* GitHub Corner Animation */
-.title-with-icon {
-    display: flex;
-    align-items: center;
+/* General Layout */
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    background: #f4f7f9; 
+    display: flex; 
     justify-content: center; 
-    gap: 15px; 
+    padding: 20px; 
+    color: #333;
 }
 
-.github-header-icon {
-    display: flex;
+.container { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+    max-width: 850px; 
+    width: 100%; 
+}
+
+/* Typography */
+h1 { color: #1a237e; text-align: center; margin-bottom: 8px; font-size: 26px; letter-spacing: -0.5px; }
+.subtitle { text-align: center; color: #5f6368; margin-bottom: 30px; font-size: 15px; font-weight: 500; }
+
+/* Header & Institutional Logos */
+.tool-header { 
+    text-align: center; 
+    margin-bottom: 35px; 
+    border-bottom: 1px solid #e0e0e0; 
+    padding-bottom: 25px; 
+}
+.logo-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px; 
+    margin-bottom: 20px; 
+}
+.logo { height: 55px; width: auto; filter: grayscale(10%) contrast(110%); }
+.affiliation-text { font-size: 0.95rem; color: #444; line-height: 1.5; }
+.affiliation-text p { margin: 3px 0; }
+
+/* Input Section */
+.model-selector { 
+    background: #f0f2f5; 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin-bottom: 25px; 
+    border-left: 6px solid #1a237e; 
+}
+.model-selector label { font-weight: bold; margin-right: 10px; color: #1a237e; }
+
+.input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.input-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #3c4043; }
+select { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #dadce0; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    font-size: 14px;
+    outline: none;
+}
+select:focus { border-color: #1a237e; box-shadow: 0 0 0 2px rgba(26,35,126,0.1); }
+
+/* Buttons */
+.btn-predict { 
+    width: 100%; 
+    background: #1a237e; 
+    color: white; 
+    border: none; 
+    padding: 15px; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-top: 25px; 
+    font-size: 17px; 
+    text-transform: uppercase;
+    transition: all 0.3s ease; 
+}
+.btn-predict:hover { background: #0d47a1; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(13,71,161,0.2); }
+
+/* Results Section */
+.result-card { margin-top: 30px; padding: 25px; border-radius: 10px; text-align: center; animation: fadeIn 0.5s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.hidden { display: none; }
+.pass { background: #e6f4ea; border: 1px solid #ceead6; color: #137333; }
+.fail { background: #fce8e6; border: 1px solid #fad2cf; color: #c5221f; }
+.status { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
+
+/* Comparison Table */
+.result-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+.result-table th, .result-table td { border: 1px solid #e8eaed; padding: 14px; text-align: left; font-size: 14px; }
+.result-table th { background-color: #f8f9fa; color: #202124; font-weight: 600; }
+.pass-text { color: #1e8e3e; font-weight: bold; }
+.fail-text { color: #d93025; font-weight: bold; }
+
+/* Footer & GitHub Link */
+.footer-note { 
+    margin-top: 50px; 
+    padding: 25px 0; 
+    border-top: 1px solid #eee; 
+    font-size: 0.85rem; 
+    color: #70757a; 
+    text-align: center; 
+    line-height: 2; 
+}
+.footer-note a { 
+    color: #1a237e; 
+    text-decoration: none; 
+    font-weight: 600;
+    display: inline-flex;
     align-items: center;
+    transition: color 0.2s;
 }
-
-.github-header-icon svg {
-    fill: #2c3e50;
-    transition: fill 0.2s ease, transform 0.2s ease;
-}
-
-.github-header-icon:hover svg {
-    fill: #34495e;
-    transform: scale(1.1);
-}
+.footer-note a:hover { color: #d93025; text-decoration: underline; }
+.footer-note svg { margin-right: 5px; fill: currentColor; vertical-align: middle; }
