@@ -1,2 +1,47 @@
-# CDI-Bone-Triage-Tool
-A forensic tool for predicting mtDNA PCR viability in highly degraded bone samples using morphological characteristics and a Hybrid Heuristic model.
+# Forensic Bone DNA Triage ver 1.0: A Multi-Model Machine Learning Approach
+
+Developed by: **Phuong T.M. Chu (Rei)** 
+Affiliation: **Center for DNA Identification (CDI), Institute of Biology (IB), Vietnam Academy of Science and Technology (VAST)**
+
+---
+
+## 📌 Project Overview
+This repository hosts an advanced forensic screening tool designed to predict the success of mitochondrial DNA (mtDNA) PCR amplification from highly degraded skeletal remains. 
+
+Unlike single-algorithm tools, this system implements a **Multi-Model Ensemble & Comparison framework**, allowing forensic experts to cross-validate predictions across five distinct machine learning architectures. This ensures maximum reliability and minimizes the risk of discarding viable DNA samples.
+
+## 🔬 Predictive Architectures
+The tool integrates five optimized models, each selected for its unique strengths in handling complex morphological data:
+
+1.  **Deep Learning (Neural Network):** Captures high-dimensional non-linear patterns.
+2.  **XGBoost (Gradient Boosting):** Optimized with a **Hybrid Heuristic Filter (n=5)** for superior specificity in extreme degradation cases.
+3.  **Support Vector Machine (SVM):** Utilizes RBF kernels for robust classification in sparse feature spaces.
+4.  **Random Forest (Ensemble Trees):** Provides stable predictions by reducing variance through bagging.
+5.  **Logistic Regression:** Serves as a highly sensitive baseline and a "Strict 25% Filter" to ensure forensic safety.
+
+## 🛠️ Hybrid Decision Logic
+To bridge the gap between Artificial Intelligence and Forensic Expertise, the system employs a dual-layer validation:
+- **Layer 1 (ML Probability):** Each model calculates a probability score based on 7 morphological characteristics.
+- **Layer 2 (Expert Heuristics):** - **XGBoost Penalty:** If $\ge 5$ features show severe degradation, the model is penalized to prevent false PASS results.
+    - **Strict Probability Guard:** If the baseline sensitivity (Logistic Regression) drops below 25%, traditional models are re-evaluated to prioritize forensic caution.
+
+## 📂 File Structure
+- `index.html`: The main user interface.
+- `app.js`: Core logic for data processing and hybrid rules.
+- `models.js`: JavaScript-transpiled ML model functions.
+- `scaler_params.js`: Standardization parameters (mean/scale) and optimized thresholds.
+- `dl_model/`: Contains the pre-trained Deep Learning model (JSON & Binary shards).
+- `style.css`: UI styling.
+
+## 🚀 How to Use
+1. Access the tool via GitHub Pages: `[YOUR_GITHUB_PAGES_URL_HERE]`
+2. Select the morphological grades for each of the 7 characteristics.
+3. Choose a specific model or "All Models" for comparison.
+4. Click **"Run Prediction"** to see the probability and PASS/FAIL status.
+
+## 📜 Citation
+If you find this tool useful for your research, please cite our manuscript:
+*Phuong T.M. Chu, Thomas J. Parsons, Anh P. Nguyen, Vinh V. Tran, Tuan A. Vu, Phong H. Do, Ha M. Tran, Mai T.T. Bui, Lan T.T. Ninh, Vu H. Nguyen, Ha H. Chu, Tien Q. Phi, Thanh T. Tran (2026). Application of Machine Learning to Evaluate the Predictive Potential of Morphological Characteristics for Mitochondrial DNA Profiling from Challenging Bone Samples.*
+
+---
+© 2026 Center for DNA Identification (CDI) | VAST
