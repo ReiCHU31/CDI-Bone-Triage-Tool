@@ -25,7 +25,9 @@
               "name": "dense",
               "units": 32,
               "activation": "relu",
-              "use_bias": true
+              "use_bias": true,
+              "kernel_initializer": {"module": "keras.initializers", "class_name": "GlorotUniform", "config": {"seed": null}},
+              "bias_initializer": {"module": "keras.initializers", "class_name": "Zeros", "config": {}}
             }
           },
           {
@@ -38,7 +40,9 @@
               "name": "dense_1",
               "units": 16,
               "activation": "relu",
-              "use_bias": true
+              "use_bias": true,
+              "kernel_initializer": {"module": "keras.initializers", "class_name": "GlorotUniform", "config": {"seed": null}},
+              "bias_initializer": {"module": "keras.initializers", "class_name": "Zeros", "config": {}}
             }
           },
           {
@@ -51,7 +55,9 @@
               "name": "dense_2",
               "units": 1,
               "activation": "sigmoid",
-              "use_bias": true
+              "use_bias": true,
+              "kernel_initializer": {"module": "keras.initializers", "class_name": "GlorotUniform", "config": {"seed": null}},
+              "bias_initializer": {"module": "keras.initializers", "class_name": "Zeros", "config": {}}
             }
           }
         ]
