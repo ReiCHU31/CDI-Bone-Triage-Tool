@@ -47,9 +47,10 @@ async function getProb(modelId, scaled, raw) {
         
         if (modelId === 'dl') {
             if (!dlModel) return -1;
-            const pred = dlModel.predict(tf.tensor2d([scaled]));
-            const data = await pred.data();
-            p = data[0];
+            p = tf.tidy(() => {
+                const inputTensor = tf.tensor2d([scaled], [1, 7]);
+                return dlModel.predict(inputTensor).dataSync()[0];
+            });
         } else {
             if (modelId === 'svm') {
                 p = sigmoid(predict_svm(inputData)); 
@@ -153,7 +154,7 @@ async function predict() {
         
         let p = await getProb(choice, scaled, rawInputs);
         if (p === -1) {
-            document.getElementById('prob-val').innerText = "Load Error";
+            document.getElementById('status-text').innerText = "LOAD ERROR";
             return;
         }
         
