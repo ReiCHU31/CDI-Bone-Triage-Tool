@@ -17,9 +17,9 @@ async function init() {
         const modelUrl = './dl_model/model.json';
         // Input in standard way LayersModel
         dlModel = await tf.loadLayersModel(modelUrl);
-        console.log("✅ Deep Learning model loaded successfully!");
+        console.log("Deep Learning model loaded successfully!");
     } catch (e) {
-        console.error("❌ Final Load Attempt Failed:", e);
+        console.error("Final Load Attempt Failed:", e);
     }
 }
 
