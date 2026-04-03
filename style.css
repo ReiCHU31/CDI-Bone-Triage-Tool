@@ -1,0 +1,39 @@
+/**
+ * Bone DNA Triage Tool - Styling
+ * Author: Phuong T.M. Chu (Rei)
+ * Year: 2026
+ */
+
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; display: flex; justify-content: center; padding: 20px; }
+.container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 800px; width: 100%; }
+h1 { color: #1a237e; text-align: center; margin-bottom: 5px; font-size: 24px; }
+.subtitle { text-align: center; color: #6c757d; margin-bottom: 25px; font-size: 14px; }
+
+/* Header & Logos */
+.tool-header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+.logo-container { display: flex; justify-content: center; align-items: center; gap: 25px; margin-bottom: 15px; }
+.logo { height: 60px; width: auto; object-fit: contain; }
+.affiliation-text { font-size: 0.9rem; color: #444; line-height: 1.4; }
+.affiliation-text p { margin: 2px 0; }
+
+.model-selector { background: #e8eaf6; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid #1a237e; }
+.input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.input-group label { display: block; font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #495057; }
+select { width: 100%; padding: 8px; border: 1px solid #ced4da; border-radius: 4px; background-color: #fff; }
+
+.btn-predict { width: 100%; background: #1a237e; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 20px; font-size: 16px; transition: 0.2s; }
+.btn-predict:hover { background: #0d47a1; }
+
+.result-card { margin-top: 25px; padding: 20px; border-radius: 8px; text-align: center; }
+.hidden { display: none; }
+.pass { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+.fail { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+.status { font-size: 28px; font-weight: bold; }
+
+.result-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+.result-table th, .result-table td { border: 1px solid #dee2e6; padding: 12px; text-align: left; }
+.result-table th { background-color: #f1f3f5; color: #495057; }
+.pass-text { color: #28a745; font-weight: bold; }
+.fail-text { color: #dc3545; font-weight: bold; }
+
+.footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.8rem; color: #777; text-align: center; line-height: 1.6; }
