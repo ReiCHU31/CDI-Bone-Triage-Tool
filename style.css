@@ -1,5 +1,5 @@
 /**
- * Bone DNA Triage Tool - Styling
+ * Forensic DNA Triage Tool - Styling
  * Center for DNA Identification (CDI), IB, VAST
  * 2026 Version
  */
@@ -101,23 +101,57 @@ select:focus { border-color: #1a237e; box-shadow: 0 0 0 2px rgba(26,35,126,0.1);
 .pass-text { color: #1e8e3e; font-weight: bold; }
 .fail-text { color: #d93025; font-weight: bold; }
 
-/* Footer & GitHub Link */
+/* Footer Section */
 .footer-note { 
-    margin-top: 50px; 
-    padding: 25px 0; 
+    margin-top: 60px; 
+    padding: 30px 0; 
     border-top: 1px solid #eee; 
     font-size: 0.85rem; 
-    color: #70757a; 
+    color: #5f6368; 
     text-align: center; 
-    line-height: 2; 
 }
-.footer-note a { 
-    color: #1a237e; 
-    text-decoration: none; 
-    font-weight: 600;
+
+.note-text { margin-bottom: 20px; }
+
+/* GitHub Link Button Styling */
+.footer-github { 
+    margin-bottom: 25px; 
+}
+.footer-github a {
     display: inline-flex;
     align-items: center;
-    transition: color 0.2s;
+    gap: 8px;
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: 1px solid #dadce0;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
-.footer-note a:hover { color: #d93025; text-decoration: underline; }
-.footer-note svg { margin-right: 5px; fill: currentColor; vertical-align: middle; }
+.footer-github a:hover {
+    background: #f8f9fa;
+    border-color: #1a237e;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color: #0d47a1;
+}
+.footer-github svg { 
+    fill: currentColor; 
+}
+
+/* Copyright & Email Styling */
+.footer-info { 
+    line-height: 1.8; 
+}
+.footer-info p { 
+    margin: 4px 0; 
+}
+.email-text a {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 500;
+}
+.email-text a:hover { 
+    text-decoration: underline; 
+    color: #d93025;
+}
