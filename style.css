@@ -85,13 +85,13 @@ select:focus { border-color: #1a237e; box-shadow: 0 0 0 2px rgba(26,35,126,0.1);
 }
 .btn-predict:hover { background: #0d47a1; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(13,71,161,0.2); }
 
-/* Note for Prediction Results */
+/* Note for Prediction Results - Centered & Small (13px) */
 .prediction-note {
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 13px;
     color: #5f6368;
-    margin: 20px 0 10px 0;
-    line-height: 1.6;
+    margin: 15px 0 5px 0;
+    line-height: 1.4;
 }
 
 /* Results Section */
@@ -105,7 +105,7 @@ select:focus { border-color: #1a237e; box-shadow: 0 0 0 2px rgba(26,35,126,0.1);
 
 /* Comparison Table */
 .result-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
-.result-table th, .result-table td { border: 1px solid #e8eaed; padding: 14px; text-align: left; font-size: 14px; }
+.result-table th, .result-table td { border: 1px solid #e8eaed; padding: 14px; text-align: left; font-size: 13px; }
 .result-table th { background-color: #f8f9fa; color: #202124; font-weight: 600; }
 .pass-text { color: #1e8e3e; font-weight: bold; }
 .fail-text { color: #d93025; font-weight: bold; }
@@ -125,7 +125,7 @@ select:focus { border-color: #1a237e; box-shadow: 0 0 0 2px rgba(26,35,126,0.1);
 }
 
 /* GitHub Link Button styling */
-.footer-github { margin-bottom: 20px; }
+.footer-github { margin-bottom: 25px; }
 .footer-github a {
     display: inline-flex;
     align-items: center;
