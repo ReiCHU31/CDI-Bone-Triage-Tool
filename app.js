@@ -17,7 +17,8 @@ async function init() {
         dlModel = await tf.loadLayersModel('./dl_model/model.json');
         console.log("Deep Learning model loaded successfully.");
     } catch (e) {
-        console.warn("DL Model load failed. Check your local directory.");
+        console.error("Detailed Error:", e);
+        console.warn("DL Model load failed. Ensure the folder name is 'dl_model' (lowercase) and contains model.json");
     }
 }
 
