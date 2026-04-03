@@ -15,18 +15,11 @@ let dlModel;
 async function init() {
     try {
         const modelUrl = './dl_model/model.json';
-        
-        dlModel = await tf.loadGraphModel(modelUrl);
-        console.log("Deep Learning Graph Model loaded.");
-        
+        // Input in standard way LayersModel
+        dlModel = await tf.loadLayersModel(modelUrl);
+        console.log("✅ Deep Learning model loaded successfully!");
     } catch (e) {
-        console.warn("GraphModel failed, trying LayersModel...");
-        try {
-            dlModel = await tf.loadLayersModel('./dl_model/model.json');
-            console.log("✅ Deep Learning Layers Model loaded.");
-        } catch (err) {
-            console.error("❌ All loading methods failed. Check model.json structure.");
-        }
+        console.error("❌ Final Load Attempt Failed:", e);
     }
 }
 
