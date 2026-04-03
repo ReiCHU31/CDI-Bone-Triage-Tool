@@ -16,18 +16,16 @@ async function init() {
     try {
         const modelUrl = './dl_model/model.json';
         
-        // Load in normal way
-        dlModel = await tf.loadLayersModel(modelUrl);
-        console.log("Deep Learning model loaded successfully.");
+        dlModel = await tf.loadGraphModel(modelUrl);
+        console.log("Deep Learning Graph Model loaded.");
         
     } catch (e) {
-        console.error("Detailed Error:", e);
-
-        // If the error comes from the InputLayer Shape, we can patch with GraphModel
-        // Or show warning message to fix the file model.json
-        if (e.message.includes("InputLayer")) {
-            console.warn("Model structure issue: Input Shape is missing in model.json.");
-            console.warn("Try re-exporting the model from Python with: model.save('model.h5') then convert again.");
+        console.warn("GraphModel failed, trying LayersModel...");
+        try {
+            dlModel = await tf.loadLayersModel('./dl_model/model.json');
+            console.log("✅ Deep Learning Layers Model loaded.");
+        } catch (err) {
+            console.error("❌ All loading methods failed. Check model.json structure.");
         }
     }
 }
